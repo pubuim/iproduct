@@ -30,6 +30,7 @@
   margin-bottom: 0;
 }
 .brand {
+  color: #27ae60;
   padding: 10px 0;
 }
 .site-title {
@@ -125,7 +126,8 @@ h2.site-title {
   z-index: 99;
   box-shadow: 0 1px 1px rgba(0, 0 , 0, .05);
 }
-.post-item-vote .vote-up.active {
+.post-item-vote .vote-up.active,
+.post:hover .post-item-vote .vote-up.active {
   color: #2ecc71;
 }
 .post:hover .post-item-vote .vote-up {
