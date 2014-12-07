@@ -16,7 +16,7 @@ class Api extends Rest
     protected function error($message)
     {
         $this->output->status(400);
-        $this->output->json(array('message' => $message, 'status' => 'ERROR'));
+        $this->output->json(array('message' => $message, 'status' => 'ERROR'))->end();
     }
 
     /**
@@ -25,7 +25,7 @@ class Api extends Rest
     protected function ok()
     {
         $this->output->status(200);
-        $this->output->json(array('status' => 'OK'));
+        $this->output->json(array('status' => 'OK'))->end();
     }
 
     /**
