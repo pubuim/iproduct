@@ -1,0 +1,25 @@
+/* iProduct.main */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  height: auto;
+}
+/* iProduct.header */
+.header {
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #f6f8f9;
+}
+.header .navbar {
+  border: 0;
+  margin-bottom: 0;
+}
+.brand {
+  padding: 10px 0;
+}
+.site-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+h2.site-title {
+  font-size: 0.8em;
+}
