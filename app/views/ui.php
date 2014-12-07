@@ -54,7 +54,7 @@
                             <ul class="posts">
                                 <li id="post-1" class="post">
                                     <div class="post-item-vote">
-                                        <a href="#3" class="vote-up">
+                                        <a href="#3" class="vote-up active">
                                             <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
                                             <div class="vote-num">123</div>
                                         </a>

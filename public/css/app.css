@@ -22,7 +22,8 @@
 /* iProduct.header */
 .header {
   margin-bottom: 20px;
-  border-bottom: 1px solid #f6f8f9;
+  background: #ecf0f1;
+  border-bottom: 1px solid #e6e8e9;
 }
 .header .navbar {
   border: 0;
@@ -51,7 +52,7 @@ h2.site-title {
 }
 .post:hover {
   border-radius: 3px;
-  background: #ECF0F1;
+  background: #ecf0f1;
 }
 .day-title {
   width: 100%;
@@ -124,9 +125,13 @@ h2.site-title {
   z-index: 99;
   box-shadow: 0 1px 1px rgba(0, 0 , 0, .05);
 }
+.post-item-vote .vote-up.active {
+  color: #2ecc71;
+}
 .post:hover .post-item-vote .vote-up {
-  border: 1px solid #ccc;
   color: #999;
+  border: 1px solid #ccc;
+  background: #fff;
 }
 .post-item-vote .vote-icon {
   width: 30px;
