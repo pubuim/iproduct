@@ -1,0 +1,23 @@
+{
+  "name": "iProduct",
+  "version": "0.0.1",
+  "authors": [
+    "hfcorriez <hfcorriez@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.22",
+    "bootstrap": "~3.2.0",
+    "angular-moment": "~0.8.0",
+    "angular-route": "~1.2.22",
+    "angular-animate": "~1.2.22",
+    "angular-sanitize": "~1.2.22",
+    "angular-strap": "~2.1.0"
+  }
+}

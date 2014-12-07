@@ -2,13 +2,11 @@
 
 namespace Web;
 
-use Pagon\Route\Rest;
-
-class Index extends Rest
+class Index extends \Web
 {
     public function get()
     {
-        $this->app->render('index.php');
+        $this->render('index.php');
     }
 
     public function post()

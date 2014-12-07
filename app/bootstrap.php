@@ -22,4 +22,8 @@ if (is_file($conf_file = __DIR__ . '/config/' . $mode . '.php')) {
     $app->append(include($conf_file));
 }
 
+// Routing
+$app->get('/', 'Web\\Index');
+$app->get('/ui', 'Web\\UI');
+
 return $app;
