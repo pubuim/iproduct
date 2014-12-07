@@ -8,6 +8,25 @@
   display: none;
   visibility: hidden;
 }
+.btn,
+.btn:focus,
+.btn:active {
+  padding: 6px 24px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+.form-control {
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .avatar {
   border-radius: 50%;
   border: 1px solid #fff;
@@ -18,6 +37,28 @@
 }
 .theme-emeraild a:hover {
   color: #27ae60;
+}
+.theme-emeraild .brand {
+  color: #27ae60;
+}
+.theme-emeraild .btn {
+  background: #2ecc71;
+  border-color: #2ecc71;
+}
+.theme-emeraild .btn:hover {
+  padding: 6px 24px;
+  background: #27ae60;
+  border-color: #27ae60;
+}
+.theme-emeraild .form-control:focus {
+  border-color: #2ecc71;
+}
+.theme-emeraild .day-title {
+  color: #2ecc71;
+}
+.theme-emeraild .post-item-vote .vote-up.active,
+.theme-emeraild .post:hover .post-item-vote .vote-up.active {
+  color: #2ecc71;
 }
 /* iProduct.header */
 .header {
@@ -30,7 +71,6 @@
   margin-bottom: 0;
 }
 .brand {
-  color: #27ae60;
   padding: 10px 0;
 }
 .site-title {
@@ -58,7 +98,6 @@ h2.site-title {
 .day-title {
   width: 100%;
   height: 30px;
-  color: #2ecc71;
   margin: 5px 0;
 }
 .day-title .day-date-title {
@@ -125,10 +164,6 @@ h2.site-title {
   position: absolute;
   z-index: 99;
   box-shadow: 0 1px 1px rgba(0, 0 , 0, .05);
-}
-.post-item-vote .vote-up.active,
-.post:hover .post-item-vote .vote-up.active {
-  color: #2ecc71;
 }
 .post:hover .post-item-vote .vote-up {
   color: #999;

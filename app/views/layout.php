@@ -23,10 +23,10 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <div class="brand pull-left">
-                                <h1 class="site-title"><a href="/">iProduct</a></h1>
+                            <a href="/" class="brand pull-left">
+                                <h1 class="site-title">iProduct</h1>
                                 <h2 id="tagline" class="site-title tagline">Inspired by Product Hunt</h2>
-                            </div>
+                            </a>
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-menu">
                             <ul class="nav navbar-nav navbar-right">
@@ -46,7 +46,7 @@
                         </div>
                         <form class="navbar-form navbar-right" role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
+                                <input type="text" class="form-control" placeholder="搜索">
                             </div>
                             <button type="submit" class="btn btn-default hide">Submit</button>
                         </form>
