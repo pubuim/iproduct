@@ -1,5 +1,7 @@
 <?php
 
+namespace Web;
+
 use Pagon\Route\Rest;
 use Pagon\Url;
 use Pagon\View;

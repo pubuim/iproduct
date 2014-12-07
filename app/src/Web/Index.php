@@ -5,7 +5,7 @@ namespace Web;
 use Model\Post;
 use Moment\Moment;
 
-class Index extends \Web
+class Index extends Web
 {
     /**
      * @var \Model\Post

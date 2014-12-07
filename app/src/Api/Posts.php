@@ -4,7 +4,7 @@ namespace Api;
 
 use Moment\Moment;
 
-class Posts extends \Api
+class Posts extends Api
 {
     /**
      * @var \Model\Post

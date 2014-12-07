@@ -2,7 +2,7 @@
 
 namespace Web;
 
-class UI extends \Web
+class UI extends Web
 {
     public function get()
     {

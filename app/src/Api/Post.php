@@ -2,7 +2,7 @@
 
 namespace Api;
 
-class Post extends \Api
+class Post extends Api
 {
     /**
      * @var \Model\Post

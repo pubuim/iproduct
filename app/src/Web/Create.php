@@ -4,7 +4,7 @@ namespace Web;
 
 use Model;
 
-class Create extends \Web
+class Create extends Web
 {
     public function get()
     {

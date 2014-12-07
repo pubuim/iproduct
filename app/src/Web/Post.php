@@ -2,7 +2,7 @@
 
 namespace Web;
 
-class Post extends \Web
+class Post extends Web
 {
     /**
      * @var \Model\Post

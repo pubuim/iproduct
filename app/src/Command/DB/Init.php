@@ -2,11 +2,11 @@
 
 namespace Command\DB;
 
+use Command\Command;
 use Pagon\Console;
-use Pagon\Route\Command as Route;
 use PDO;
 
-class Init extends Route
+class Init extends Command
 {
     protected $arguments = array(
         '-f|--force' => array('help' => 'Force create database', 'type' => 'bool'),

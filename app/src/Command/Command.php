@@ -1,5 +1,7 @@
 <?php
 
+namespace Command;
+
 use Pagon\Route\Command as Route;
 
 class Command extends Route

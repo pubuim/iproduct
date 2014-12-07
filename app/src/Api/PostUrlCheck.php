@@ -2,7 +2,7 @@
 
 namespace Api;
 
-class PostUrlCheck extends \Api
+class PostUrlCheck extends Api
 {
     /**
      * GET /
