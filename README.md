@@ -1,4 +1,3 @@
-iproduct
-## Pagon框架
+iProduct
 
-Product news!
+Help u to create Product News community!
