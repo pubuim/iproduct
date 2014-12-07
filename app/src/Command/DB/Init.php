@@ -22,10 +22,10 @@ class Init extends Route
             if ($this->params['force']) {
                 // Force create database
                 $pdo->exec('DROP DATABASE `' . $config['dbname'] . '`');
-                $pdo->exec('CREATE DATABASE `' . $config['dbname'] . '` DEFAULT CHARACTER SET `utf8`;');
+                $pdo->exec('CREATE DATABASE `' . $config['dbname'] . '` DEFAULT CHARACTER SET `utf8mb4`;');
             } else {
                 // Try to create database
-                $pdo->exec('CREATE DATABASE IF NOT EXISTS `' . $config['dbname'] . '` DEFAULT CHARACTER SET `utf8`;');
+                $pdo->exec('CREATE DATABASE IF NOT EXISTS `' . $config['dbname'] . '` DEFAULT CHARACTER SET `utf8mb4`;');
             }
             $pdo->exec("USE `{$config['dbname']}`");
             $sql = file_get_contents(APP_DIR . '/migrations/schema.sql');
