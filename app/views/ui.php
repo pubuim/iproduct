@@ -1,4 +1,4 @@
-<div id="page">
+<div id="page" class="theme-emeraild">
     <header class="header">
         <div class="wrapper">
             <div class="row">
@@ -15,7 +15,7 @@
                             <h2 id="tagline" class="site-title tagline">Inspired by Product Hunt</h2>
                         </div>
                     </div>
-                    <div class="collapse navbar-collapse" id="navbar-collapse-menu">
+                    <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#">关于</a></li>
                             <li class="dropdown">
@@ -31,6 +31,12 @@
                             <li><a href="#">提交</a></li>
                         </ul>
                     </div>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default hide">Submit</button>
+                    </form>
                 </nav>
             </div>
         </div>
@@ -46,7 +52,7 @@
                         </div>
                         <div class="day-content">
                             <ul class="posts">
-                                <li class="post">
+                                <li id="post-1" class="post">
                                     <div class="post-item-vote">
                                         <a href="#3" class="vote-up">
                                             <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
@@ -70,9 +76,140 @@
                                         <a href="#1" class="post-link"></a>
                                     </div>
                                 </li>
+                                <li id="post-2" class="post">
+                                    <div class="post-item-vote">
+                                        <a href="#3" class="vote-up">
+                                            <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
+                                            <div class="vote-num">123</div>
+                                        </a>
+                                    </div>
+                                    <div class="post-item-meta">
+                                        <div class="post-item-user">
+                                            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                                        </div>
+                                        <div class="post-item-comments">
+                                            <i class="comment-icon glyphicon glyphicon-comment"></i>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-item-main">
+                                        <div class="main-title">
+                                            <a href="#2">瀑布</a>
+                                        </div>
+                                        <div class="main-tagline description">测试</div>
+                                        <a href="#1" class="post-link"></a>
+                                    </div>
+                                </li>
+                                <li id="post-3" class="post">
+                                    <div class="post-item-vote">
+                                        <a href="#3" class="vote-up">
+                                            <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
+                                            <div class="vote-num">123</div>
+                                        </a>
+                                    </div>
+                                    <div class="post-item-meta">
+                                        <div class="post-item-user">
+                                            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                                        </div>
+                                        <div class="post-item-comments">
+                                            <i class="comment-icon glyphicon glyphicon-comment"></i>
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-item-main">
+                                        <div class="main-title">
+                                            <a href="#2">瀑布</a>
+                                        </div>
+                                        <div class="main-tagline description">测试</div>
+                                        <a href="#1" class="post-link"></a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div class="day-more">加载更多</div>
+                        <div class="posts-more"><a href="#5">查看其余 x 个产品</a></div>
+                    </div>
+                    <div id="day-141129" class="day day-2 day-container">
+                        <div class="day-title">
+                            <h4 class="day-date-title">昨天</h4>
+                            <time class="day-day-title">14-11-29</time>
+                        </div>
+                        <div class="day-content">
+                            <ul class="posts">
+                                <li id="post-1" class="post">
+                                    <div class="post-item-vote">
+                                        <a href="#3" class="vote-up">
+                                            <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
+                                            <div class="vote-num">123</div>
+                                        </a>
+                                    </div>
+                                    <div class="post-item-meta">
+                                        <div class="post-item-user">
+                                            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                                        </div>
+                                        <div class="post-item-comments">
+                                            <i class="comment-icon glyphicon glyphicon-comment"></i>
+                                            <span>123</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-item-main">
+                                        <div class="main-title">
+                                            <a href="#2">瀑布</a>
+                                        </div>
+                                        <div class="main-tagline description">测试</div>
+                                        <a href="#1" class="post-link"></a>
+                                    </div>
+                                </li>
+                                <li id="post-2" class="post">
+                                    <div class="post-item-vote">
+                                        <a href="#3" class="vote-up">
+                                            <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
+                                            <div class="vote-num">123</div>
+                                        </a>
+                                    </div>
+                                    <div class="post-item-meta">
+                                        <div class="post-item-user">
+                                            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                                        </div>
+                                        <div class="post-item-comments">
+                                            <i class="comment-icon glyphicon glyphicon-comment"></i>
+                                            <span>12</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-item-main">
+                                        <div class="main-title">
+                                            <a href="#2">瀑布</a>
+                                        </div>
+                                        <div class="main-tagline description">测试</div>
+                                        <a href="#1" class="post-link"></a>
+                                    </div>
+                                </li>
+                                <li id="post-3" class="post">
+                                    <div class="post-item-vote">
+                                        <a href="#3" class="vote-up">
+                                            <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
+                                            <div class="vote-num">123</div>
+                                        </a>
+                                    </div>
+                                    <div class="post-item-meta">
+                                        <div class="post-item-user">
+                                            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                                        </div>
+                                        <div class="post-item-comments">
+                                            <i class="comment-icon glyphicon glyphicon-comment"></i>
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-item-main">
+                                        <div class="main-title">
+                                            <a href="#2">瀑布</a>
+                                        </div>
+                                        <div class="main-tagline description">测试</div>
+                                        <a href="#1" class="post-link"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="posts-more"><a href="#5">查看其余 x 个产品</a></div>
                     </div>
                 </div>
             </div>
