@@ -24,7 +24,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="brand pull-left">
-                                <h1 class="site-title">iProduct</h1>
+                                <h1 class="site-title"><a href="/">iProduct</a></h1>
                                 <h2 id="tagline" class="site-title tagline">Inspired by Product Hunt</h2>
                             </div>
                         </div>

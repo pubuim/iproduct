@@ -1,19 +1,25 @@
-<div class="container">
-    <form action="?" method="POST">
+<article class="content">
+    <div class="wrapper">
         <div class="row">
-            <label>地址</label>
-            <input class="form-control" name="url" type="text"/>
+            <div class="col-lg-12">
+                <form action="?" method="POST">
+                    <div class="form-group">
+                        <label class="control-label" for="site-url">网址</label>
+                        <input class="form-control" id="site-url" name="url" type="text" value="http://">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="site-title">标题</label>
+                        <input class="form-control" id="site-title" name="title" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="site-content">简介</label>
+                        <textarea class="form-control" id="site-content" name="content" placeholder="产品介绍"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit">提交</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="row">
-            <label>标题</label>
-            <input class="form-control" name="title" type="text"/>
-        </div>
-        <div class="row">
-            <label>介绍</label>
-            <textarea class="form-control" name="content"></textarea>
-        </div>
-        <div class="row">
-            <button class="btn btn-success" type="submit">提交</button>
-        </div>
-    </form>
-</div>
+    </div>
+</article>
