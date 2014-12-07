@@ -1,19 +1,52 @@
 #!/usr/bin/env php
 <?php
 use Pagon\Cli;
+use Pagon\Console;
 use Pagon\Utility\ArgParser;
 
 /** @var $app Pagon\App */
 $app = include dirname(__DIR__) . '/app/bootstrap.php';
 $app->buffer = false;
 
+// Init database
 $app->command('db\:init', '\Command\DB\Init');
-$app->command('db\:(:command)', function ($req, $res) {
+
+/**
+ * Route db commands to phpmig
+ */
+$app->command('db\::op', function ($req, $res) {
     chdir(APP_DIR);
-    $args = array_slice($req->argv, 2);
-    echo shell_exec(ROOT_DIR . '/vendor/bin/phpmig ' . ($req->params['command'] != 'mig' ? $req->params['command'] . ' ' : '') . join(' ', $args));
+    $args = $req->params['args'];
+    $op = $req->params['op'];
+    $dir = ' ';
+    $boot = ' -b ' . APP_DIR . '/phpmig.php';
+
+    switch ($op) {
+        case 'generate':
+            $dir = ' ' . APP_DIR . '/migrations';
+            if (!$args) {
+                Console::error('Need [name] to generate!');
+                $res->end();
+            }
+            break;
+        case 'init':
+            Console::error('Can not use init here!');
+            $res->end();
+            break;
+        default:
+            if (false === array_search($op, array('up', 'down', 'check', 'migrate', 'rollback', 'status', 'up'))) {
+                $boot = '';
+            }
+    }
+
+    $command = ROOT_DIR . '/bin/phpmig ' . ($op != 'mig' ? $op : '') . $boot . $args . $dir;
+
+    echo shell_exec($command);
 });
 
+/**
+ * Handle 404 for help
+ */
 $app->handleError('404', function ($req, $res) {
     $parser = new ArgParser();
     $parser->add('task', array('help' => 'Task to run', 'enum' => array(
