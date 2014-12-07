@@ -7,10 +7,6 @@ class Post extends \Web
     /**
      * @var \Model\Post
      */
-
-    /**
-     * @var \Model\Post
-     */
     public $post;
 
     /**
@@ -18,7 +14,7 @@ class Post extends \Web
      */
     public function get()
     {
-        $id = $this->params->id;
+        $id = $this->params['id'];
 
         $this->post = \Model\Post::dispense()
             ->find_one($id);
