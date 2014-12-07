@@ -8,4 +8,11 @@ class UI extends \Web
     {
         $this->render('ui.php');
     }
+
+    /**
+     * Override before to disable DB loading
+     */
+    protected function before()
+    {
+    }
 }

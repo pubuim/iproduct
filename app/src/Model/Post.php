@@ -16,6 +16,13 @@ use Pagon\Url;
 class Post extends Model
 {
     public static $_table = 'posts';
+
+    // Default status
+    public $status = self::UNCHECKED;
+
+    /**
+     * Define constant
+     */
     const DELETED = -1;
     const UNCHECKED = 0;
     const OK = 1;
@@ -23,7 +30,7 @@ class Post extends Model
     public function url()
     {
         if ($this->content) {
-            return '/p/' . $this->id;
+            return '/posts/' . $this->id;
         } else {
             return $this->url;
         }
@@ -31,7 +38,7 @@ class Post extends Model
 
     public function permalink()
     {
-        return Url::to('/p/' . $this->id, null, true);
+        return Url::to('/posts/' . $this->id, null, true);
     }
 
     public function isDeleted()

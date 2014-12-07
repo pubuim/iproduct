@@ -2,7 +2,7 @@
 
 namespace Web;
 
-use Model\Model;
+use Model\Post;
 use Moment\Moment;
 
 class Index extends \Web
@@ -10,8 +10,10 @@ class Index extends \Web
     /**
      * @var \Model\Post
      */
-    protected $_postModel;
 
+    /**
+     * @var \Model\Post[]
+     */
     public $posts = array();
 
     /**
@@ -29,7 +31,7 @@ class Index extends \Web
             /**
              * PostsF
              */
-            $this->posts[$_s] = $this->_postModel
+            $this->posts[$_s] = Post::dispense()
                 ->where_gte('created_at', $_s)
                 ->where_lt('created_at', $_e)
                 ->order_by_desc('digg_count')
@@ -38,19 +40,5 @@ class Index extends \Web
         }
 
         $this->render('index.php');
-    }
-
-    public function postModel()
-    {
-        print_r($this->input->data);
-    }
-
-    /**
-     * Before Route
-     */
-    protected function before()
-    {
-        $this->loadOrm();
-        $this->_postModel = Model::factory('Post');
     }
 }

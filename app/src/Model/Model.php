@@ -40,4 +40,21 @@ class Model extends \Model
     {
         return self::model();
     }
+
+    /**
+     * Override save and update time
+     *
+     * @return
+     */
+    public function save()
+    {
+        if ($this->is_new()) {
+            $this->created_at = time();
+        } else {
+            $this->updated_at = time();
+        }
+
+        return parent::save();
+    }
+
 }

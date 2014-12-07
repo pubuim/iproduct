@@ -1,6 +1,7 @@
 <?php
 
 use Pagon\Route\Rest;
+use Pagon\Url;
 use Pagon\View;
 
 class Web extends Rest
@@ -10,6 +11,14 @@ class Web extends Rest
 
     protected $config = array('config' => null);
     protected $title = 'iProduct';
+
+    /**
+     * Before
+     */
+    protected function before()
+    {
+        $this->loadOrm();
+    }
 
     /**
      * After
@@ -43,5 +52,15 @@ class Web extends Rest
     protected function loadOrm()
     {
         $this->app->loadOrm();
+    }
+
+    /**
+     * Redirect the page
+     *
+     * @param $uri
+     */
+    protected function redirect($uri)
+    {
+        $this->output->redirect(Url::to($uri))->end();
     }
 }
