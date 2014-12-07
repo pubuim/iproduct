@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+use Pagon\Cli;
+use Pagon\Utility\ArgParser;
+
+/** @var $app Pagon\App */
+$app = include dirname(__DIR__) . '/app/bootstrap.php';
+$app->buffer = false;
+
+$app->command('db\:init', '\Command\DB\Init');
+$app->command('db\:(:command)', function ($req, $res) {
+    chdir(APP_DIR);
+    $args = array_slice($req->argv, 2);
+    echo shell_exec(ROOT_DIR . '/vendor/bin/phpmig ' . ($req->params['command'] != 'mig' ? $req->params['command'] . ' ' : '') . join(' ', $args));
+});
+
+$app->handleError('404', function ($req, $res) {
+    $parser = new ArgParser();
+    $parser->add('task', array('help' => 'Task to run', 'enum' => array(
+        'db:init'     => 'Init the database and table',
+        'db:status'   => 'Show status of migrations',
+        'db:migrate'  => 'Run all migrates',
+        'db:generate' => 'Generate a new migration',
+        'db:rollback' => 'Rollback last, or to a specific migration',
+        'db:up'       => 'Run a specific migration',
+        'db:down'     => 'Revert a specific migration',
+        'db:list'     => 'List all command of db'
+    )));
+    echo $parser->help();
+});
+
+$app->run();

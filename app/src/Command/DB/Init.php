@@ -1,6 +1,6 @@
 <?php
 
-namespace Console\DB;
+namespace Command\DB;
 
 use Pagon\Console;
 use Pagon\Route\Command as Route;
