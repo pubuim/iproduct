@@ -1,4 +1,7 @@
-<div id="wrapper" class="typo typo-selection">
+<div class="container">
+    <div>
+        <a href="/create">发布</a>
+    </div>
     <?php foreach ($posts as $time => $list): ?>
         <h5><?php echo date('Y-m-d', $time); ?></h5>
         <ul>
