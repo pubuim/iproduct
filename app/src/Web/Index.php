@@ -2,7 +2,6 @@
 
 namespace Web;
 
-use Model\Post;
 use Moment\Moment;
 
 class Index extends Web
@@ -31,7 +30,7 @@ class Index extends Web
             /**
              * PostsF
              */
-            $this->posts[$_s] = Post::dispense()
+            $this->posts[$_s] = \Model\Post::dispense()
                 ->where_gte('created_at', $_s)
                 ->where_lt('created_at', $_e)
                 ->order_by_desc('digg_count')
