@@ -7,7 +7,7 @@ if (empty($app)) {
 // Routing
 $app->get('/', 'Web\\Index');
 $app->all('/create', 'Web\\Create');
-$app->get('/posts/:id', 'Web\\Post');
+$app->get('/posts/:id(/:op)?', 'Web\\Post');
 $app->get('/v1/posts', 'Api\\Posts');
 $app->get('/v1/posts/url_check', 'Api\\PostUrlCheck');
 $app->get('/v1/posts/:id', 'Api\\Post');
