@@ -22,8 +22,29 @@ if (is_file($conf_file = __DIR__ . '/config/' . $mode . '.php')) {
     $app->append(include($conf_file));
 }
 
-// Routing
-$app->get('/', 'Web\\Index');
-$app->get('/ui', 'Web\\UI');
+$app->inject('loadOrm', function () use ($app) {
+    $config = $app->database;
+    ORM::configure(buildDsn($config));
+    ORM::configure('username', $config['username']);
+    ORM::configure('password', $config['password']);
+    Model::$auto_prefix_models = '\\Model\\';
+});
+
+$app->share('pdo', function ($app) {
+    $config = $app->database;
+    return new PDO(buildDsn($config), $config['username'], $config['password'], $config['options']);
+});
+
+return $app;
+/**
+ * build Dsn string
+ *
+ * @param array $config
+ * @return string
+ */
+function buildDsn(array $config)
+{
+    return sprintf('%s:host=%s;port=%s;dbname=%s;charset=%s', $config['type'], $config['host'], $config['port'], $config['dbname'], $config['charset'] ? $config['charset'] : 'utf8');
+}
 
 return $app;

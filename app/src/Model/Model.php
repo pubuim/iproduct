@@ -7,7 +7,7 @@ namespace Model;
  *
  * @package Model
  * @param int    $id
- * @param string $modified_at
+ * @param string $updated_at
  * @param string $created_at
  */
 class Model extends \Model

@@ -11,6 +11,9 @@ class Web extends Rest
     protected $config = array('config' => null);
     protected $title = 'iProduct';
 
+    /**
+     * After
+     */
     protected function after()
     {
         if (!$this->app->output->body && $this->_tpl) {
@@ -18,6 +21,11 @@ class Web extends Rest
         }
     }
 
+    /**
+     * Render template
+     *
+     * @param $tpl
+     */
     protected function render($tpl)
     {
         $body = new View(
@@ -27,5 +35,13 @@ class Web extends Rest
         );
 
         $this->app->render($this->_tpl_layout, array('body' => $body->render()) + get_object_vars($this));
+    }
+
+    /**
+     * Load ORM and database
+     */
+    protected function loadOrm()
+    {
+        $this->app->loadOrm();
     }
 }
