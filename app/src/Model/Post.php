@@ -36,9 +36,9 @@ class Post extends Model
         }
     }
 
-    public function permalink()
+    public function permalink($full = false)
     {
-        return Url::to('/posts/' . $this->id, null, true);
+        return Url::to('/posts/' . $this->id, null, $full);
     }
 
     public function isDeleted()
