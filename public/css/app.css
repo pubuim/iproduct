@@ -6,7 +6,7 @@
 }
 /* iProduct.header */
 .header {
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
   border-bottom: 1px solid #f6f8f9;
 }
 .header .navbar {
