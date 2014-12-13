@@ -5,12 +5,12 @@ if (empty($app)) {
 }
 
 // Routing
-$app->get('/', 'Web\\Index');
-$app->all('/create', 'Web\\Create');
-$app->all('/posts/:id(/:op)?', 'Web\\Post');
-$app->get('/v1/posts', 'Api\\Posts');
-$app->get('/v1/posts/url_check', 'Api\\PostUrlCheck');
-$app->all('/v1/posts/:id(/:op)?', 'Api\\Post');
-$app->get('/ui', 'Web\\UI');
+$app->get('/', 'Web\Index');
+$app->all('/create', 'Web\Create');
+$app->all('/posts/:id(/:op)?', 'Web\Post');
+$app->get('/v1/posts', 'Api\Posts');
+$app->get('/v1/posts/url_check', 'Api\PostUrlCheck');
+$app->all('/v1/posts/:id(/:op)?', 'Api\Post');
+$app->get('/ui', 'Web\UI');
 
 $app->run();

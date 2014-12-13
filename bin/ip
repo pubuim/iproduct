@@ -9,7 +9,7 @@ $app = include dirname(__DIR__) . '/app/bootstrap.php';
 $app->buffer = false;
 
 // Init database
-$app->command('db\:init', '\Command\DB\Init');
+$app->command('db\:init', 'Command\DB\Init');
 
 /**
  * Route db commands to phpmig
