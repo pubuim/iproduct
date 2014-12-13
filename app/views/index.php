@@ -13,9 +13,9 @@
                                 <?php foreach ($list as $post): ?>
                                     <li id="post-<?php echo $post->id ?>" class="post"> <!-- 超过 10 条后加上 hidden-post-->
                                         <div class="post-item-vote">
-                                            <a href="#3" class="vote-up">  <!-- 登录链接 & 顶逻辑，已投票样式加上 active -->
+                                            <a href="javascript:;" class="vote-up" data-action-vote data-action-vote-id="<?php echo $post->id; ?>">  <!-- 登录链接 & 顶逻辑，已投票样式加上 active -->
                                                 <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
-                                                <div class="vote-num">123</div>  <!-- 投票数 -->
+                                                <div class="vote-num" data-bind-vote-id="<?php echo $post->id; ?>"><?php echo $post->digg_count ?></div>  <!-- 投票数 -->
                                             </a>
                                         </div>
                                         <div class="post-item-meta">

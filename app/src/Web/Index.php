@@ -20,7 +20,7 @@ class Index extends Web
      */
     public function get()
     {
-        $date_range = 5;
+        $date_range = 3;
 
         for ($i = 0; $i < $date_range; $i++) {
             $_m = new Moment();
@@ -34,7 +34,6 @@ class Index extends Web
                 ->where_gte('created_at', $_s)
                 ->where_lt('created_at', $_e)
                 ->order_by_desc('digg_count')
-                ->limit(10)
                 ->find_many();
         }
 
