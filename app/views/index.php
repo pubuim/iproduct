@@ -29,7 +29,7 @@
                                         </div>
                                         <div class="post-item-main">
                                             <div class="main-title">
-                                                <a href="#1"><?php echo $post->title ?></a>  <!-- 跳转页链接 -->
+                                                <a href="<?php echo $post->url ?>" target="_blank"><?php echo $post->title ?></a>  <!-- 跳转页链接 -->
                                             </div>
                                             <div class="main-tagline description">测试</div> <!-- 描述文本 -->
                                             <a href="<?php echo $post->permalink() ?>" class="post-link"></a>
