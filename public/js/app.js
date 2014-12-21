@@ -8,6 +8,12 @@ Services.Post = {
     })
   },
 
+  down: function (id, cb) {
+    this.request(id + '/down', {method: 'POST'}, function (post) {
+      cb(post.digg_count);
+    })
+  },
+
   checkUrl: function (url, cb) {
     this.request('url_check/?url=' + encodeURIComponent(url), {method: 'GET'}, function (data) {
       cb(data);
@@ -85,10 +91,19 @@ Components.UrlCheck = function () {
 $(document).ready(function () {
   $(".content").on("click", "[data-action-vote]", function () {
     var id = $(this).data('action-vote-id');
+    var self = this;
 
-    Services.Post.up(id, function (count) {
-      $("[data-bind-vote-id='" + id + "']").html(count);
-    });
+    if (!$(this).hasClass('active')) {
+      Services.Post.up(id, function (count) {
+        $("[data-bind-vote-id='" + id + "']").html(count);
+        $(self).addClass('active');
+      });
+    } else {
+      Services.Post.down(id, function (count) {
+        $("[data-bind-vote-id='" + id + "']").html(count);
+        $(self).removeClass('active');
+      });
+    }
   })
 
   /**

@@ -36,6 +36,12 @@ class Post extends Model
         }
     }
 
+    public function isDiggBy($user)
+    {
+        if (!$user || !$user->id) return false;
+        return UserDigg::exists($user->id, $this->id);
+    }
+
     public function permalink($full = false)
     {
         return Url::to('/posts/' . $this->id, null, $full);

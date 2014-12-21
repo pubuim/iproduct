@@ -1,6 +1,6 @@
 <div id="post-<?php echo $post->id ?>" class="post"> <!-- 超过 10 条后加上 hidden-post-->
     <div class="post-item-vote">
-        <a href="javascript:;" class="vote-up" data-action-vote data-action-vote-id="<?php echo $post->id; ?>">
+        <a href="javascript:;" class="vote-up <?php echo $post->isDiggBy($login) ? 'active' : '' ?>" data-action-vote data-action-vote-id="<?php echo $post->id; ?>">
             <!-- 登录链接 & 顶逻辑，已投票样式加上 active -->
             <i class="vote-icon glyphicon glyphicon-chevron-up"></i>
 

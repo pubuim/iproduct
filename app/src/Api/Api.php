@@ -2,6 +2,7 @@
 
 namespace Api;
 
+use Model\User;
 use Pagon\Route\Rest;
 use Pagon\View;
 
@@ -13,6 +14,11 @@ class Api extends Rest
      * @var array
      */
     protected $data = array();
+
+    /**
+     * @var \Model\User
+     */
+    protected $login;
 
     /**
      * The API format
@@ -85,6 +91,11 @@ class Api extends Rest
     protected function before()
     {
         $this->loadOrm();
+
+        // Auto login
+        if ($loginId = $this->input->session('login')) {
+            $this->login = User::dispense()->find_one($loginId);
+        }
     }
 
     /**
