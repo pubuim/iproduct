@@ -10,11 +10,11 @@
     </div>
     <div class="post-item-meta">
         <div class="post-item-user">
-            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/> <!-- 用户 -->
+            <img class="avatar" src="<?php echo $post->creator->avatar_url ?>" title="<?php echo $post->creator->name ?>"/> <!-- 用户 -->
         </div>
         <div class="post-item-comments">
             <i class="comment-icon glyphicon glyphicon-comment"></i>
-            <span>123</span> <!-- 评论数 -->
+            <span><?php echo $post->comment_count ?></span> <!-- 评论数 -->
         </div>
     </div>
     <div class="post-item-main">
