@@ -46,15 +46,17 @@
                         <div class="post-section-title post-comment-title"><?php echo $post->comment_count ?> 条评论</div>
                         <div class="post-comment-box">
                             <textarea class="form-control" id="new-comment"></textarea>
-                            <button type="button" class="btn btn-sm btn-submit" data-component="CreateComment" data-post-id="<?php echo $post->id ?>" data-content-container="#new-comment" data-comments-container=".comments">发布评论</button>
+                            <button type="button" class="btn btn-sm btn-submit" data-component="CreateComment" data-post-id="<?php echo $post->id ?>" data-content-container="#new-comment" data-comments-container=".comments">
+                                发布评论
+                            </button>
                         </div>
                         <div class="post-comment-container">
-                            <?php $comments = $post->comments()->find_many(); ?>
+                            <?php $comments = $post->comments()->limit(10)->find_many(); ?>
                             <ul class="comments">
                                 <?php foreach ($comments as $comment): ?>
                                     <?php include(__DIR__ . '/blocks/comment-item.php'); ?>
                                     <!--<ul class="child-comments">
-                                        <?php /*include(__DIR__ . '/blocks/comment-item.php'); */?>
+                                        <?php /*include(__DIR__ . '/blocks/comment-item.php'); */ ?>
                                     </ul>-->
                                 <?php endforeach; ?>
                             </ul>
