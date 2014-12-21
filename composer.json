@@ -2,7 +2,6 @@
   "name": "pubuim/iproduct",
   "description": "Inspired by ProductHub",
   "license": "MIT",
-  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Corrie Zhao",
@@ -19,9 +18,8 @@
     "j4mie/paris": "v1.5.2",
     "davedevelopment/phpmig": "v1.0",
     "react/http": "0.3.*",
-    "fightbulc/moment": "~1.5",
-    "opauth/opauth": "~0.4",
-    "opauth/sinaweibo": "dev-master"
+    "fightbulc/moment": "1.5.*",
+    "khepin/weibo-sdk": "v1.0.0"
   },
   "require-dev": {
     "pagon/composer-packer": "0.1.x"

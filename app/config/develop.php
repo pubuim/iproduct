@@ -20,5 +20,13 @@ return array(
         'password' => '',
         'charset'  => 'utf8',
         'options'  => array()
+    ),
+    'passport' => array(
+        'weibo' => array(
+            'key'            => '4001143741',
+            'secret'         => 'ae6c0c7599e22f2fe0eb7726666cee32',
+            'callback_url'   => '/login/weibo/callback',
+            'strategy_class' => 'SinaWeibo'
+        )
     )
 );

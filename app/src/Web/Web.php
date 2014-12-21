@@ -2,6 +2,7 @@
 
 namespace Web;
 
+use Model\User;
 use Pagon\Route\Rest;
 use Pagon\Url;
 use Pagon\View;
@@ -11,6 +12,7 @@ class Web extends Rest
     protected $_tpl_layout = 'layout.php';
     protected $_tpl = '';
 
+    protected $login;
     protected $config = array('config' => null);
     protected $title = 'iProduct';
 
@@ -20,6 +22,11 @@ class Web extends Rest
     protected function before()
     {
         $this->loadOrm();
+
+        // Auto login
+        if ($loginId = $this->input->session('login')) {
+            $this->login = User::dispense()->find_one($loginId);
+        }
     }
 
     /**
@@ -41,15 +48,39 @@ class Web extends Rest
     }
 
     /**
+     * Show error message
+     *
+     * @param $message
+     */
+    protected function error($message)
+    {
+        $this->render('error.php', array('message' => $message));
+        $this->output->end();
+    }
+
+    /**
+     * Login id
+     *
+     * @param $id
+     */
+    protected function login($id)
+    {
+        $this->input->session('login', $id);
+        $this->redirect('/');
+        $this->output->end();
+    }
+
+    /**
      * Render template
      *
-     * @param $tpl
+     * @param string $tpl
+     * @param array  $scope
      */
-    protected function render($tpl)
+    protected function render($tpl, array $scope = array())
     {
         $body = new View(
             $tpl,
-            get_object_vars($this) + $this->app->locals,
+            get_object_vars($this) + $this->app->locals + $scope,
             array('dir' => $this->app->views)
         );
 
