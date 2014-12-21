@@ -29,7 +29,7 @@ class Search extends Web
 
         $this->posts = \Model\Post::dispense()
             ->order_by_desc('digg_count')
-            ->where_like('title', $keyword)
+            ->where_like('title', '%' . $keyword . '%')
             ->find_many();
 
         $this->render('search.php');
