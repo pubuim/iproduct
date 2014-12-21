@@ -11,7 +11,7 @@
     <script>var config = <?php echo json_encode($config); ?></script>
 </head>
 <body role="document" class="page">
-    <div id="page" class="theme-emeraild">
+    <div id="page" class="theme-cyan">
         <header class="header">
             <div class="wrapper">
                 <div class="row">

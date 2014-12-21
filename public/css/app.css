@@ -32,39 +32,53 @@
   border: 1px solid #fff;
 }
 /* iProduct.theme */
-.theme-emeraild a {
-  color: #2ecc71;
+.theme-cyan a {
+  color: #00BCD4;
 }
-.theme-emeraild a:hover {
-  color: #27ae60;
+.theme-cyan a:hover {
+  color: #0097A7;
 }
-.theme-emeraild .brand {
-  color: #27ae60;
+.theme-cyan .header {
+  background: #00BCD4;
+  color: #FFF;
 }
-.theme-emeraild .btn {
-  background: #2ecc71;
-  border-color: #2ecc71;
+.theme-cyan .header a {
+  color: #FFF;
 }
-.theme-emeraild .btn:hover {
+.theme-cyan .header a:hover {
+  color: #0097A7;
+}
+.theme-cyan .brand {
+  text-decoration: none;
+}
+.theme-cyan .btn {
+  background: #00BCD4;
+  border-color: #00BCD4;
+}
+.theme-cyan .btn:hover {
   padding: 6px 24px;
-  background: #27ae60;
-  border-color: #27ae60;
+  background: #0097A7;
+  border-color: #0097A7;
 }
-.theme-emeraild .form-control:focus {
-  border-color: #2ecc71;
+.theme-cyan .form-control:focus {
+  border-color: #00BCD4;
 }
-.theme-emeraild .day-title {
-  color: #2ecc71;
+.theme-cyan .day-title {
+  color: #00BCD4;
 }
-.theme-emeraild .post-item-vote .vote-up.active,
-.theme-emeraild .post:hover .post-item-vote .vote-up.active {
-  color: #2ecc71;
+.theme-cyan .post-item-vote .vote-up.active,
+.theme-cyan .post:hover .post-item-vote .vote-up.active {
+  color: #00BCD4;
+}
+.theme-cyan .post .post-item-vote .vote-up:hover {
+  border-color: #00BCD4;
+  color: #00BCD4;
 }
 /* iProduct.header */
 .header {
   margin-bottom: 20px;
-  background: #fefefe;
-  border-bottom: 1px solid #f6f8f9;
+  background: #fff;
+  border-bottom: 1px solid #B2EBF2;
 }
 .header .navbar {
   border: 0;
@@ -89,12 +103,12 @@ h2.site-title {
   margin: 0 -10px;
   padding: 0;
 }
-.post {
+.posts .post {
   width: 100%;
   height: 60px;
   padding: 10px;
 }
-.post:hover {
+.posts .post:hover {
   border-radius: 3px;
   background: #f6f8f9;
 }
@@ -173,10 +187,6 @@ h2.site-title {
   border: 1px solid #ccc;
   background: #fff;
 }
-.post .post-item-vote .vote-up:hover {
-  border-color: #2ecc71;
-  color: #2ecc71;
-}
 .post-item-vote .vote-icon {
   width: 30px;
   height: 18px;
@@ -242,3 +252,4 @@ h2.site-title {
   text-align: center;
   padding: 10px 0;
 }
+/* iProduct.post */

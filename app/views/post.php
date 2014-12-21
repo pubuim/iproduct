@@ -2,13 +2,8 @@
     <div class="wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1>
-                    <a href="<?php echo $post->url; ?>" target="_blank"><?php echo $post->title; ?></a>
-                </h1>
+                <?php include(__DIR__ . '/blocks/post-item.php'); ?>
             </div>
-        </div>
-        <div class="row">
-            <p><?php echo $post->content; ?></p>
         </div>
     </div>
 </article>

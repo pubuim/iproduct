@@ -7,7 +7,9 @@
     <div class="day-content">
         <ul class="posts">
             <?php foreach ($list as $post): ?>
-                <?php include(__DIR__ . '/post-item.php'); ?>
+                <li class="post-container">
+                    <?php include(__DIR__ . '/post-item.php'); ?>
+                </li>
             <?php endforeach; ?>
         </ul>
     </div>
