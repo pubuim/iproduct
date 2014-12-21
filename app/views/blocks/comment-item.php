@@ -7,7 +7,7 @@
             </div>
             <div class="comment-content"><?php echo $comment->content; ?></div>
             <div class="comment-action">
-                <a href="#">顶</a>
+                <!--<a href="#">顶</a>-->
                 <a href="#">回复</a>
             </div>
         </div>
