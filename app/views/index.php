@@ -1,4 +1,4 @@
-<article class="content">
+<article class="content content-home">
     <div class="wrapper">
         <div class="row">
             <div id="posts-container" class="col-lg-12">

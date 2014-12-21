@@ -75,12 +75,12 @@
   border-color: #00BCD4;
   color: #00BCD4;
 }
-/* iProduct.header */
-.header {
-  margin-bottom: 20px;
-  background: #fff;
-  border-bottom: 1px solid #B2EBF2;
+.theme-cyan .content-post {
+  padding: 30px 0;
+  background: #00BCD4;
+  color: #FFF;
 }
+/* iProduct.header */
 .header .navbar {
   border: 0;
   margin-bottom: 0;
@@ -98,7 +98,10 @@ h2.site-title {
 .navbar-nav>li>a:hover {
   background: none;
 }
-/* iProduct.post */
+/* iProduct.posts */
+.content-home {
+  margin-top: 20px;
+}
 .posts {
   list-style: none;
   margin: 0 -10px;
@@ -254,3 +257,6 @@ h2.site-title {
   padding: 10px 0;
 }
 /* iProduct.post */
+.content-post {
+  margin-top: 0;
+}
