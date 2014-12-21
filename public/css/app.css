@@ -63,8 +63,8 @@
 /* iProduct.header */
 .header {
   margin-bottom: 20px;
-  background: #ecf0f1;
-  border-bottom: 1px solid #e6e8e9;
+  background: #fefefe;
+  border-bottom: 1px solid #f6f8f9;
 }
 .header .navbar {
   border: 0;
@@ -80,6 +80,9 @@
 h2.site-title {
   font-size: 0.8em;
 }
+.navbar-nav>li>a:hover {
+  background: none;
+}
 /* iProduct.post */
 .posts {
   list-style: none;
@@ -93,7 +96,7 @@ h2.site-title {
 }
 .post:hover {
   border-radius: 3px;
-  background: #ecf0f1;
+  background: #f6f8f9;
 }
 .day-title {
   width: 100%;
@@ -170,6 +173,10 @@ h2.site-title {
   border: 1px solid #ccc;
   background: #fff;
 }
+.post .post-item-vote .vote-up:hover {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
 .post-item-vote .vote-icon {
   width: 30px;
   height: 18px;
@@ -214,6 +221,18 @@ h2.site-title {
   display: inline-block;
   line-height: 18px;
   margin-right: 5px;
+}
+.post-empty {
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 3px;
+  color: #e0e0e0;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  background: #fefefe;
 }
 .posts-more {
   width: 100%;

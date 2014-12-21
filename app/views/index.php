@@ -38,6 +38,10 @@
                                 <?php endforeach; ?>
                             </ul>
                         </div>
+                        <div class="post-empty">
+                            <i class="empt-icon glyphicon glyphicon-link"></i>
+                            <span class="post-empty-text">没有内容</span>
+                        </div>
                         <div class="posts-more"><a href="#5">查看其余 x 个产品</a></div> <!-- 大于 10 条显示，x 替换成：总数 - 10，链接为显示所有链接 -->
                     </div>
                 <?php endforeach; ?>
