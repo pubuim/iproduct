@@ -294,7 +294,8 @@ h2.site-title {
   color: #727272;
 }
 .votes,
-.comments {
+.comments,
+.child-comments {
   list-style: none;
   margin: 10px 0;
   padding: 0;
@@ -327,7 +328,9 @@ h2.site-title {
 }
 .comment-action {
   font-size: 12px;
-
+}
+.child-comments {
+  padding-left: 50px;
 }
 .vote-item {
   width: 40px;

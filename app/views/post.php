@@ -129,6 +129,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <ul class="child-comments">
+                                        <li class="comment-container" id="comment-3">
+                                            <div class="comment-item">
+                                                <img class="avatar comment-avatar user-123" src="/images/doge.png" title="User 123"/>
+                                                <div class="comment-body">
+                                                    <div class="comment-user"><a href="#" target="_blank">Yan Zhu</a><span class="comment-time">12 月 13 日</span></div>
+                                                    <div class="comment-content">测试测试评论</div>
+                                                    <div class="comment-action">
+                                                        <a href="#">顶</a>
+                                                        <a href="#">回复</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="comment-container" id="comment-2">
                                     <div class="comment-item">
@@ -144,6 +159,9 @@
                                     </div>
                                 </li>
                             </ul>
+                            <button type="button" class="btn btn-sm btn-loadmore" data-component="LoadMorePosts" data-posts-container="#posts-container" data-posts-start=".day-time:last">
+                                加载更多
+                            </button>
                         </div>
                     </div>
                 </div>
