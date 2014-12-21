@@ -68,12 +68,13 @@ Components.LoadMorePosts = function () {
 Components.UrlCheck = function () {
   var self = this;
   var titleContainer = $($(this).data('title-container'))
+  var contentContainer = $($(this).data('content-container'))
 
   $(this).blur(function () {
     var url = $(self).val();
     Services.Post.checkUrl(url, function (data) {
-      if (!data.title || titleContainer.val()) return;
-      titleContainer.val(data.title);
+      if (data.title) titleContainer.val(data.title + ' ' + titleContainer.val());
+      if (data.content) contentContainer.val(data.content + ' ' + contentContainer.val());
     })
   })
 }

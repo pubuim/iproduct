@@ -18,7 +18,7 @@ class PostUrlCheck extends Api
         $_payload = $this->scrapePage($url);
 
         preg_match('/<title>([^<]+)<\/title>/i', $_payload, $title_matches);
-        preg_match('/<meta name="description" content="(.*)" \/> /i', $_payload, $description_matches);
+        preg_match('/<meta name="description" content="(.*)"/i', $_payload, $description_matches);
 
         $this->data['title'] = $title_matches[1];
         $this->data['content'] = $description_matches[1];
