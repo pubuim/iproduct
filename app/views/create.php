@@ -5,11 +5,11 @@
                 <form action="?" method="POST">
                     <div class="form-group">
                         <label class="control-label" for="site-url">网址</label>
-                        <input class="form-control" id="site-url" name="url" type="text" value="http://">
+                        <input class="form-control" id="site-url" name="url" type="text" value="<?php echo query("url", "http://") ?>">
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="site-title">标题</label>
-                        <input class="form-control" id="site-title" name="title" type="text" value="">
+                        <input class="form-control" id="site-title" name="title" type="text" value="<?php echo query("title") ?>" />
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="site-content">简介</label>

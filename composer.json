@@ -1,11 +1,8 @@
 {
-  "name": "pagon/pagon",
-  "description": "Pagon starter app",
-  "keywords": [
-    "pagon",
-    "skelton"
-  ],
+  "name": "pubuim/iproduct",
+  "description": "Inspired by ProductHub",
   "license": "MIT",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Corrie Zhao",
@@ -23,7 +20,8 @@
     "davedevelopment/phpmig": "v1.0",
     "react/http": "0.3.*",
     "fightbulc/moment": "~1.5",
-    "opauth/opauth": "~0.4"
+    "opauth/opauth": "~0.4",
+    "opauth/sinaweibo": "dev-master"
   },
   "require-dev": {
     "pagon/composer-packer": "0.1.x"

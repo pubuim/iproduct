@@ -12,6 +12,7 @@ $app = Pagon::create(__DIR__ . '/config/default.php');
 
 // Get current mode
 $mode = $app->mode();
+$app->assisting();
 
 // Mount current dir as root dir
 $app->mount(APP_DIR);
