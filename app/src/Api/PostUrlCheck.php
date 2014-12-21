@@ -17,11 +17,11 @@ class PostUrlCheck extends Api
 
         $_payload = $this->scrapePage($url);
 
-        preg_match('/<title>([^<]+)<\/title>/i', $_payload, $title_matches);
+        preg_match('/<title>(.+?)<\/title>/i', $_payload, $title_matches);
         preg_match('/<meta name="description" content="(.*)"/i', $_payload, $description_matches);
 
-        $this->data['title'] = $title_matches[1];
-        $this->data['content'] = $description_matches[1];
+        $this->data['title'] = trim($title_matches[1]);
+        $this->data['content'] = trim($description_matches[1]);
     }
 
     /**
@@ -45,7 +45,7 @@ class PostUrlCheck extends Api
             $out .= "Host: {$urlParts['host']}\r\n";
             $out .= "Connection: Close\r\n\r\n";
             fwrite($fp, $out);
-            while (!feof($fp) && strlen($_payload) < 2048) {
+            while (!feof($fp) && strlen($_payload) < 3096) {
                 $_payload .= fgets($fp, 1024);
             }
             fclose($fp);
