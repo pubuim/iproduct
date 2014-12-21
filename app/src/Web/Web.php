@@ -33,6 +33,14 @@ class Web extends Rest
     }
 
     /**
+     * Disable layout
+     */
+    protected function disableLayout()
+    {
+        $this->_tpl_layout = false;
+    }
+
+    /**
      * Render template
      *
      * @param $tpl
@@ -45,7 +53,11 @@ class Web extends Rest
             array('dir' => $this->app->views)
         );
 
-        $this->app->render($this->_tpl_layout, array('body' => $body->render()) + get_object_vars($this));
+        if ($this->_tpl_layout) {
+            $this->app->render($this->_tpl_layout, array('body' => $body->render()) + get_object_vars($this));
+        } else {
+            $this->output->body($body->render());
+        }
     }
 
     /**
