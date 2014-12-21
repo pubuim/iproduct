@@ -16,7 +16,7 @@ class Create extends Web
         $data = $this->input->data;
 
         $post = Model\Post::dispense()
-            ->create($data);
+            ->create(array('user_id' => $this->login->id) + $data);
 
         $post->save();
 

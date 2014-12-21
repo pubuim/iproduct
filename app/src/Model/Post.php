@@ -36,6 +36,16 @@ class Post extends Model
         }
     }
 
+    public function creator()
+    {
+        return $this->belongs_to('User', 'user_id')->find_one();
+    }
+
+    public function diggers()
+    {
+        return $this->has_many_through('User', 'UserDigg', 'post_id', 'user_id');
+    }
+
     public function isDiggBy($user)
     {
         if (!$user || !$user->id) return false;

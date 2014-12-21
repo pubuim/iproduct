@@ -12,6 +12,8 @@ namespace Model;
  */
 class Model extends \Model
 {
+    private $_populated = array();
+
     /**
      * @param string|null $connection
      * @return \ORM|\ORMWrapper|static|Model
@@ -39,6 +41,26 @@ class Model extends \Model
     public function type()
     {
         return self::model();
+    }
+
+    /**
+     * Override to get function
+     *
+     * @param string $property
+     * @return null|string|void
+     */
+    public function __get($property)
+    {
+        $value = parent::__get($property);
+
+        if ($value === null) {
+            if (!$this->_populated[$property] && method_exists($this, $property)) {
+                $this->_populated[$property] = $this->$property();
+            }
+            return $this->_populated[$property];
+        }
+
+        return $value;
     }
 
     /**

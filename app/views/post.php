@@ -24,94 +24,22 @@
                     </div>
                     <div class="post-item-meta">
                         <div class="post-item-user"> <!-- 用户 -->
-                            <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            <span class="user-name">Yan Zhu</span>
+                            <img class="avatar" src="<?php echo $post->creator->avatar_url ?>" title="<?php echo $post->creator->bio ?>"/>
+                            <span class="user-name"><?php echo $post->creator->name ?></span>
                         </div>
                         <div class="post-share"> <!-- 分享代码 -->
 
                         </div>
                     </div>
                     <div class="post-votes">
-                        <div class="post-section-title post-vote-title">X 人赞过</div>
+                        <?php $diggers = $post->diggers()->find_many(); ?>
+                        <div class="post-section-title post-vote-title"><?php echo count($diggers); ?> 人赞过</div>
                         <ul class="votes">
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
-                            <li class="vote-item">
-                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
-                            </li>
+                            <?php foreach ($diggers as $user): ?>
+                                <li class="vote-item">
+                                    <img class="avatar" src="<?php echo $user->avatar_url; ?>" title="<?php echo $user->name; ?>"/>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                     <div class="post-comments">
