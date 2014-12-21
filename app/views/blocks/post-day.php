@@ -4,6 +4,7 @@
         <h4 class="day-date-title">今天</h4>
         <time class="day-day-title posts-day"><?php echo date('Y-m-d', $time); ?></time>
     </div>
+    <?php if ($list): ?>
     <div class="day-content">
         <ul class="posts">
             <?php foreach ($list as $post): ?>
@@ -13,10 +14,14 @@
             <?php endforeach; ?>
         </ul>
     </div>
-    <div class="posts-more"><a href="#5">查看其余 x 个产品</a></div>
+    <?php if (count($list)>10): ?>
+    <div class="posts-more"><a href="#5">查看其余 <?php echo count($list) - 10 ?> 个产品</a></div>
+    <?php endif; ?>
     <!-- 大于 10 条显示，x 替换成：总数 - 10，链接为显示所有链接 -->
+    <?php else: ?>
     <div class="post-empty">
         <i class="empt-icon glyphicon glyphicon-link"></i>
         <span class="post-empty-text">没有内容</span>
     </div>
+    <?php endif; ?>
 </div>
