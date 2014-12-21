@@ -43,7 +43,7 @@
                         </ul>
                     </div>
                     <div class="post-comments">
-                        <div class="post-section-title post-comment-title">X 条评论</div>
+                        <div class="post-section-title post-comment-title"><?php echo $post->comment_count ?> 条评论</div>
                         <div class="post-comment-box">
                             <textarea class="form-control" id="new-comment"></textarea>
                             <button type="button" class="btn btn-sm btn-submit" data-component="CreateComment" data-post-id="<?php echo $post->id ?>" data-content-container="#new-comment" data-comments-container=".comments">发布评论</button>

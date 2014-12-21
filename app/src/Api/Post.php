@@ -49,35 +49,45 @@ class Post extends Api
                     $this->error('已经赞过');
                 }
 
-                \ORM::get_db()->beginTransaction();
+                try {
+                    \ORM::get_db()->beginTransaction();
 
-                if (!UserDigg::dispense()
-                    ->create(array(
-                        'user_id' => $this->login->id,
-                        'post_id' => $post->id
-                    ))->save()
-                ) {
-                    $this->error('赞失败');
+                    if (!UserDigg::dispense()
+                        ->create(array(
+                            'user_id' => $this->login->id,
+                            'post_id' => $post->id
+                        ))->save()
+                    ) {
+                        $this->error('赞失败');
+                    }
+                    $post->set_expr('digg_count', '`digg_count`+1');
+                    $post->save();
+
+                    \ORM::get_db()->commit();
+                    $post = $postModel->find_one($id);
+                } catch (\PDOException $e) {
+                    \ORM::get_db()->rollBack();
+                    $this->error('数据库错误');
                 }
-                $post->set_expr('digg_count', '`digg_count`+1');
-                $post->save();
-
-                \ORM::get_db()->commit();
-                $post = $postModel->find_one($id);
                 break;
             case 'down':
                 if (!$userDigg = $post->isDiggBy($this->login)) {
                     $this->error('没有赞过');
                 }
 
-                \ORM::get_db()->beginTransaction();
+                try {
+                    \ORM::get_db()->beginTransaction();
 
-                $userDigg->delete();
-                $post->set_expr('digg_count', '`digg_count`-1');
-                $post->save();
+                    $userDigg->delete();
+                    $post->set_expr('digg_count', '`digg_count`-1');
+                    $post->save();
 
-                \ORM::get_db()->commit();
-                $post = $postModel->find_one($id);
+                    \ORM::get_db()->commit();
+                    $post = $postModel->find_one($id);
+                } catch (\PDOException $e) {
+                    \ORM::get_db()->rollBack();
+                    $this->error('数据库错误');
+                }
                 break;
         }
 
