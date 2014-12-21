@@ -8,6 +8,12 @@ Services.Post = {
     })
   },
 
+  checkUrl: function (url, cb) {
+    this.request('url_check/?url=' + encodeURIComponent(url), {method: 'GET'}, function (data) {
+      cb(data);
+    })
+  },
+
   request: function (path, option, success, fail) {
     if (typeof option === "function") {
       success = option;
@@ -40,6 +46,9 @@ Services.Posts = {
   }
 }
 
+/**
+ * 加载更多
+ */
 Components.LoadMorePosts = function () {
   $(this).click(function () {
     var lastDay = $($(this).data('posts-start')).text();
@@ -53,6 +62,25 @@ Components.LoadMorePosts = function () {
   })
 }
 
+/**
+ * Url 获取标题
+ */
+Components.UrlCheck = function () {
+  var self = this;
+  var titleContainer = $($(this).data('title-container'))
+
+  $(this).blur(function () {
+    var url = $(self).val();
+    Services.Post.checkUrl(url, function (data) {
+      if (!data.title || titleContainer.val()) return;
+      titleContainer.val(data.title);
+    })
+  })
+}
+
+/**
+ * Dom ready
+ */
 $(document).ready(function () {
   $(".content").on("click", "[data-action-vote]", function () {
     var id = $(this).data('action-vote-id');
