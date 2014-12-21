@@ -2,6 +2,8 @@
 
 namespace Web;
 
+use Pagon\Html;
+
 class Search extends Web
 {
     /**
@@ -14,11 +16,16 @@ class Search extends Web
     public $posts = array();
 
     /**
+     * @var string 关键词
+     */
+    public $keyword = '';
+
+    /**
      * GET /
      */
     public function get()
     {
-        $keyword = $this->input->query('kw');
+        $this->keyword = $keyword = Html::encode($this->input->query('kw'));
 
         $this->posts = \Model\Post::dispense()
             ->order_by_desc('digg_count')
