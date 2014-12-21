@@ -7,7 +7,7 @@
                 <?php endforeach; ?>
             </div>
             <div class="col-lg-12">
-                <button type="button" data-component="LoadMorePosts" data-posts-container="#posts-container" data-posts-start=".posts-day:last">
+                <button type="button" data-component="LoadMorePosts" data-posts-container="#posts-container" data-posts-start=".day-time:last">
                     加载更多
                 </button>
             </div>

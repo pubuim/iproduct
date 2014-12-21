@@ -2,7 +2,7 @@
     <!-- day-1 为今天起第几天 -->
     <div class="day-title">
         <h4 class="day-date-title">今天</h4>
-        <time class="day-day-title posts-day"><?php echo date('Y-m-d', $time); ?></time>
+        <time class="day-time"><?php echo date('Y-m-d', $time); ?></time>
     </div>
     <div class="day-content">
         <ul class="posts">
