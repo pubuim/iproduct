@@ -52,6 +52,7 @@
   text-decoration: none;
 }
 .theme-cyan .btn {
+  color: #fff;
   background: #00BCD4;
   border-color: #00BCD4;
 }
@@ -123,9 +124,9 @@ h2.site-title {
   line-height: 20px;
   margin: 5px 0;
 }
-.day-title .day-day-title {
+.day-title .day-time {
   color: #ccc;
-  font-size: 16px;
+  font-size: 14px;
   vertical-align: bottom;
   margin-left: 10px;
 }

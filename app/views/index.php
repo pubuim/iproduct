@@ -6,8 +6,8 @@
                     <?php include(__DIR__ . '/blocks/post-day.php'); ?>
                 <?php endforeach; ?>
             </div>
-            <div class="col-lg-12">
-                <button type="button" data-component="LoadMorePosts" data-posts-container="#posts-container" data-posts-start=".day-time:last">
+            <div class="col-lg-12 text-center">
+                <button type="button" class="btn btn-loadmore" data-component="LoadMorePosts" data-posts-container="#posts-container" data-posts-start=".day-time:last">
                     加载更多
                 </button>
             </div>
