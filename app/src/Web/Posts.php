@@ -28,7 +28,7 @@ class Posts extends Web
 
         for ($i = 0; $i < $date_range; $i++) {
             $_m = new Moment($start);
-            $_s = $_m->subtractDays($i)->startOf('day')->getTimestamp();
+            $_s = $_m->subtractDays($i + 1)->startOf('day')->getTimestamp();
             $_e = $_m->addDays(1)->startOf('day')->getTimestamp();
 
             /**
