@@ -41,6 +41,11 @@ class Post extends Model
         return $this->belongs_to('User', 'user_id')->find_one();
     }
 
+    public function comments()
+    {
+        return $this->has_many('Comment', 'post_id');
+    }
+
     public function diggers()
     {
         return $this->has_many_through('User', 'UserDigg', 'post_id', 'user_id');

@@ -45,58 +45,18 @@
                     <div class="post-comments">
                         <div class="post-section-title post-comment-title">X 条评论</div>
                         <div class="post-comment-box">
-                            <textarea class="form-control"></textarea>
-                            <button type="button" class="btn btn-sm btn-submit">发布评论</button>
+                            <textarea class="form-control" id="new-comment"></textarea>
+                            <button type="button" class="btn btn-sm btn-submit" data-component="CreateComment" data-post-id="<?php echo $post->id ?>" data-content-container="#new-comment" data-comments-container=".comments">发布评论</button>
                         </div>
                         <div class="post-comment-container">
+                            <?php $comments = $post->comments()->find_many(); ?>
                             <ul class="comments">
-                                <li class="comment-container" id="comment-1">
-                                    <div class="comment-item">
-                                        <img class="avatar comment-avatar user-123" src="/images/doge.png" title="User 123"/>
-
-                                        <div class="comment-body">
-                                            <div class="comment-user"><a href="#" target="_blank">Yan
-                                                    Zhu</a><span class="comment-time">今天 刚刚</span></div>
-                                            <div class="comment-content">测试测试</div>
-                                            <div class="comment-action">
-                                                <a href="#">顶</a>
-                                                <a href="#">回复</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="child-comments">
-                                        <li class="comment-container" id="comment-3">
-                                            <div class="comment-item">
-                                                <img class="avatar comment-avatar user-123" src="/images/doge.png" title="User 123"/>
-
-                                                <div class="comment-body">
-                                                    <div class="comment-user"><a href="#" target="_blank">Yan
-                                                            Zhu</a><span class="comment-time">12 月 13 日</span></div>
-                                                    <div class="comment-content">测试测试评论</div>
-                                                    <div class="comment-action">
-                                                        <a href="#">顶</a>
-                                                        <a href="#">回复</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="comment-container" id="comment-2">
-                                    <div class="comment-item">
-                                        <img class="avatar comment-avatar user-123" src="/images/doge.png" title="User 123"/>
-
-                                        <div class="comment-body">
-                                            <div class="comment-user"><a href="#" target="_blank">Yan
-                                                    Zhu</a><span class="comment-time">12 月 13 日</span></div>
-                                            <div class="comment-content">测试测试评论</div>
-                                            <div class="comment-action">
-                                                <a href="#">顶</a>
-                                                <a href="#">回复</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                <?php foreach ($comments as $comment): ?>
+                                    <?php include(__DIR__ . '/blocks/comment-item.php'); ?>
+                                    <!--<ul class="child-comments">
+                                        <?php /*include(__DIR__ . '/blocks/comment-item.php'); */?>
+                                    </ul>-->
+                                <?php endforeach; ?>
                             </ul>
                             <button type="button" class="btn btn-sm btn-loadmore" data-component="LoadMorePosts" data-posts-container="#posts-container" data-posts-start=".day-time:last">
                                 加载更多

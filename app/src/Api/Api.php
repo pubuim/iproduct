@@ -42,6 +42,13 @@ class Api extends Rest
     protected $_jsonp_callback = 'callback';
 
     /**
+     * Html tpl for render
+     *
+     * @var string
+     */
+    protected $_html_tpl = '';
+
+    /**
      * Show error error message
      *
      * @param string $message
@@ -78,9 +85,11 @@ class Api extends Rest
             case 'jsonp':
                 $this->output->jsonp($data, $this->_jsonp_callback);
                 break;
+            case 'html':
+                $this->app->render($this->_html_tpl, array('login' => $this->login) + $this->data);
+                break;
             default:
                 $this->output->json($data);
-
         }
         $this->output->end();
     }

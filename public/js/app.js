@@ -52,6 +52,19 @@ Services.Posts = {
   }
 }
 
+Services.Comment = {
+  create: function (data, success, fail) {
+    $.ajax({
+      url: "/v1/comments?html=1",
+      data: data,
+      type: "POST",
+      dataType: "html"
+    })
+      .done(success)
+      .fail(fail)
+  }
+}
+
 /**
  * 加载更多
  */
@@ -62,6 +75,26 @@ Components.LoadMorePosts = function () {
 
     Services.Posts.fetch(lastDay, function (html) {
       postContainer.append(html);
+    }, function (err) {
+      alert(err)
+    })
+  })
+}
+
+Components.CreateComment = function () {
+  $(this).click(function () {
+    var contentContainer = $($(this).data('content-container'));
+    var postId = $(this).data('post-id');
+    var commentsContainer = $($(this).data('comments-container'))
+
+    if (!contentContainer.val()) {
+      alert('输入后再提交哦！')
+      return;
+    }
+
+    Services.Comment.create({post_id: postId, content: contentContainer.val()}, function (html) {
+      commentsContainer.append(html);
+      contentContainer.val('');
     }, function (err) {
       alert(err)
     })

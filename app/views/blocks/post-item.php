@@ -10,7 +10,8 @@
     </div>
     <div class="post-item-meta">
         <div class="post-item-user">
-            <img class="avatar" src="<?php echo $post->creator->avatar_url ?>" title="<?php echo $post->creator->name ?>"/> <!-- 用户 -->
+            <img class="avatar" src="<?php echo $post->creator->avatar_url ?>" title="<?php echo $post->creator->name ?>"/>
+            <!-- 用户 -->
         </div>
         <div class="post-item-comments">
             <i class="comment-icon glyphicon glyphicon-comment"></i>
