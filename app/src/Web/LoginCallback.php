@@ -52,7 +52,7 @@ class LoginCallback extends Web
                  */
                 $weiboClient = new \SaeTClientV2($weiboConfig['key'], $weiboConfig['secret'], $token['access_token']);
                 $userProfile = $weiboClient->show_user_by_id($token['uid']);
-                if (!$userProfile) {
+                if (!$userProfile || !$userProfile['name']) {
                     $this->error('获取用户失败，请稍后重试');
                 }
 
