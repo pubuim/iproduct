@@ -5,7 +5,7 @@
                 <form action="?" method="POST">
                     <div class="form-group">
                         <label class="control-label" for="site-url">网址</label>
-                        <input class="form-control" id="site-url" name="url" type="text" value="<?php echo query("url", "http://") ?>" data-component="" data-title-container="#site-title" />
+                        <input class="form-control" id="site-url" name="url" type="text" value="<?php echo query("url", "http://") ?>" data-component="UrlCheck" data-title-container="#site-title" />
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="site-title">标题</label>
