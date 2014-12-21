@@ -107,8 +107,6 @@
                             <li class="vote-item">
                                 <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
                             </li>
-
-
                         </ul>
                     </div>
                     <div class="post-comments">
@@ -117,7 +115,26 @@
                             <textarea class="form-control"></textarea>
                             <button type="button" class="btn btn-sm btn-submit">发布评论</button>
                         </div>
-                        <div class="post-comment-container"></div>
+                        <div class="post-comment-container">
+                            <ul class="comments">
+                                <li class="comment-item" id="comment-1">
+                                    <img id="user-123" class="avatar comment-avatar" src="/images/doge.png" title="User 123"/>
+                                    <div class="comment-body">
+                                        <div class="comment-user"><a href="#" target="_blank">Yan Zhu</a><span class="comment-time">今天 刚刚</span></div>
+                                        <div class="comment-content">测试测试</div>
+                                        <div class="comment-action"></div>
+                                    </div>
+                                </li>
+                                <li class="comment-item" id="comment-2">
+                                    <img id="user-123" class="avatar comment-avatar" src="/images/doge.png" title="User 123"/>
+                                    <div class="comment-body">
+                                        <div class="comment-user"><a href="#" target="_blank">Yan Zhu</a><span class="comment-time">12 月 13 日</span></div>
+                                        <div class="comment-content">测试测试评论</div>
+                                        <div class="comment-action"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
