@@ -34,7 +34,7 @@ class Posts extends Web
             /**
              * PostsF
              */
-            $this->posts[$_s] = \Model\Post::dispense()
+            $this->posts[date('Y-m-d', $_s)] = \Model\Post::dispense()
                 ->where_gte('created_at', $_s)
                 ->where_lt('created_at', $_e)
                 ->order_by_desc('digg_count')
