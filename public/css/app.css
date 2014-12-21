@@ -301,7 +301,6 @@ h2.site-title {
 }
 .comments {
   border-top: 1px solid #EEE;
-  padding: 10px 0;
 }
 .comment-item {
   margin: 10px 0;
@@ -326,6 +325,10 @@ h2.site-title {
 .comment-content {
   color: #727272;
 }
+.comment-action {
+  font-size: 12px;
+
+}
 .vote-item {
   width: 40px;
   height: 40px;
@@ -334,6 +337,9 @@ h2.site-title {
 .vote-item .avatar {
   width: 32px;
   height: 32px;
+}
+.content-post .post-comment-box {
+  margin: 20px 0;
 }
 .content-post .post-comments {
   width: 100%;
