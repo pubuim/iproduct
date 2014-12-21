@@ -44,9 +44,9 @@
                                 <li><a href="/create">提交</a></li>
                             </ul>
                         </div>
-                        <form class="navbar-form navbar-right" role="search">
+                        <form class="navbar-form navbar-right" role="search" action="/search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="搜索">
+                                <input type="text" name="kw" class="form-control" placeholder="搜索">
                             </div>
                             <button type="submit" class="btn btn-default hide">Submit</button>
                         </form>
