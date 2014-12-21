@@ -1,6 +1,6 @@
 /* iProduct.basic */
 .wrapper {
-  width: 960px;
+  width: 800px;
   margin: 0 auto;
   height: auto;
 }
@@ -270,12 +270,24 @@ h2.site-title {
 }
 .content-post .post-item-meta {
   width: 100%;
-  height: auto;
+  height: 60px;
   float: none;
   padding: 10px 0;
   border-top: 1px solid #eee;
 }
 .content-post .post-item-user {
-  width: auto;
+  width: 50%;
+  float: left;
   color: #ccc;
+}
+.content-post .post-share {
+  width: 50%;
+  float: right;
+}
+.content-post .post-comments {
+  width: 100%;
+  height: 0;
+}
+.content-post .post-comment-box .form-control {
+  margin: 10px 0;
 }
