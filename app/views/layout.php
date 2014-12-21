@@ -45,12 +45,14 @@
                             </li>
                             <li><a href="/create">提交</a></li>
                             <?php if ($login): ?>
-                                <li>
-                                    <img src="<?php echo $login->avatar_url; ?>"/>
-                                    <?php echo $login->name; ?>
+                                <li class="navbar-login">
+                                    <a href="#">
+                                        <img class="avatar user-avatar" src="<?php echo $login->avatar_url; ?>"/>
+                                        <?php echo $login->name; ?>
+                                    </a>
                                 </li>
                             <?php else: ?>
-                                <li>登录</li>
+                                <li><a href="/login/weibo">登录</a></li>
                             <?php endif; ?>
                         </ul>
                     </div>

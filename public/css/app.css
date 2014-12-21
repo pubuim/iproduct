@@ -4,6 +4,11 @@
   margin: 0 auto;
   height: auto;
 }
+.content-new,
+.content-post,
+.content-home {
+  margin-top: 20px;
+}
 .hide {
   display: none;
   visibility: hidden;
@@ -93,14 +98,18 @@ h2.site-title {
 .navbar-nav>li>a {
   padding: 15px 0;
   margin-left: 30px;
+  line-height: 20px;
 }
-.navbar-nav>li>a:hover {
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
   background: none;
 }
-/* iProduct.posts */
-.content-home {
-  margin-top: 20px;
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  margin: -9px 0;
 }
+/* iProduct.posts */
 .posts {
   list-style: none;
   margin: 0 -10px;
@@ -259,9 +268,6 @@ h2.site-title {
   margin: 10px 0;
 }
 /* iProduct.post */
-.content-post {
-  margin-top: 20px;
-}
 .content-post .post-item-main {
   height: auto;
   padding-right: 0;
