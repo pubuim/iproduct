@@ -273,16 +273,36 @@ h2.site-title {
   height: 60px;
   float: none;
   padding: 10px 0;
-  border-top: 1px solid #eee;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 .content-post .post-item-user {
   width: 50%;
+  padding: 0;
   float: left;
   color: #ccc;
 }
 .content-post .post-share {
   width: 50%;
   float: right;
+}
+.content-post .post-section-title {
+  font-size: 14px;
+  color: #727272;
+}
+.votes {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+}
+.vote-item {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.vote-item .avatar {
+  width: 32px;
+  height: 32px;
 }
 .content-post .post-comments {
   width: 100%;

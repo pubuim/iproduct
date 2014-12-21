@@ -26,8 +26,93 @@
 
                         </div>
                     </div>
+                    <div class="post-votes">
+                        <div class="post-section-title post-vote-title">X 人赞过</div>
+                        <ul class="votes">
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+                            <li class="vote-item">
+                                <img id="user-123" class="avatar" src="/images/doge.png" title="User 123"/>
+                            </li>
+
+
+                        </ul>
+                    </div>
                     <div class="post-comments">
-                        <div class="post-comment-title">X 条评论</div>
+                        <div class="post-section-title post-comment-title">X 条评论</div>
                         <div class="post-comment-box">
                             <textarea class="form-control"></textarea>
                             <button type="button" class="btn btn-sm btn-submit">发布评论</button>
