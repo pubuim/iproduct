@@ -85,17 +85,21 @@ Components.CreateComment = function () {
   $(this).click(function () {
     var contentContainer = $($(this).data('content-container'));
     var postId = $(this).data('post-id');
-    var commentsContainer = $($(this).data('comments-container'))
+    var commentsContainer = $($(this).data('comments-container'));
+    var self = this;
 
     if (!contentContainer.val()) {
       alert('输入后再提交哦！')
       return;
     }
 
+    $(this).attr('disabled', 'true');
     Services.Comment.create({post_id: postId, content: contentContainer.val()}, function (html) {
+      $(self).removeAttr('disabled');
       commentsContainer.append(html);
       contentContainer.val('');
     }, function (err) {
+      $(self).removeAttr('disabled');
       alert(err)
     })
   })
