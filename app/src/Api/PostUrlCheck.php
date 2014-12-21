@@ -44,7 +44,6 @@ class PostUrlCheck extends Api
             $out = "GET {$urlParts['path']} HTTP/1.1\r\n";
             $out .= "Host: {$urlParts['host']}\r\n";
             $out .= "Connection: Close\r\n\r\n";
-            var_dump($out);
             fwrite($fp, $out);
             while (!feof($fp) && strlen($_payload) < 2048) {
                 $_payload .= fgets($fp, 1024);
