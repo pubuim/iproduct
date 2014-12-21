@@ -75,11 +75,6 @@
   border-color: #00BCD4;
   color: #00BCD4;
 }
-.theme-cyan .content-post {
-  padding: 30px 0;
-  background: #00BCD4;
-  color: #FFF;
-}
 /* iProduct.header */
 .header .navbar {
   border: 0;
@@ -94,6 +89,10 @@
 }
 h2.site-title {
   font-size: 0.8em;
+}
+.navbar-nav>li>a {
+  padding: 15px 0;
+  margin-left: 30px;
 }
 .navbar-nav>li>a:hover {
   background: none;
@@ -258,5 +257,25 @@ h2.site-title {
 }
 /* iProduct.post */
 .content-post {
-  margin-top: 0;
+  margin-top: 20px;
+}
+.content-post .post-item-main {
+  height: auto;
+  padding-right: 0;
+  margin-bottom: 20px;
+}
+.content-post .main-tagline {
+  height: auto;
+  word-wrap: break-word;
+}
+.content-post .post-item-meta {
+  width: 100%;
+  height: auto;
+  float: none;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+.content-post .post-item-user {
+  width: auto;
+  color: #ccc;
 }
