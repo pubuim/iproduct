@@ -3,9 +3,11 @@ CREATE TABLE `posts` (
   `title` varchar(255) NOT NULL DEFAULT '',
   `url` varchar(1000) NOT NULL DEFAULT '',
   `content` text,
-  `digg_count` int(11) DEFAULT '0',
-  `view_count` int(11) DEFAULT '0',
+  `digg_count` int(11) NOT NULL DEFAULT '0',
+  `view_count` int(11) NOT NULL DEFAULT '0',
+  `comment_count` int(11) NOT NULL DEFAULT '0',
   `status` tinyint(4) DEFAULT '0',
+  `user_id` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL,
   `created_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
@@ -32,4 +34,16 @@ CREATE TABLE `user_diggs` (
   `created_at` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`,`post_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `comments` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content` text NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `digg_count` int(11) NOT NULL DEFAULT '0',
+  `updated_at` int(11) DEFAULT NULL,
+  `created_at` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
